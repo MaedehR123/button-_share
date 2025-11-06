@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- تنظیم نوع کاراکترها به UTF-8 برای پشتیبانی از همه زبان‌ها -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- اطمینان از سازگاری با مرورگرهای قدیمی مثل Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- تنظیم واکنش‌گرایی (ریسپانسیو بودن) برای موبایل و دسکتاپ -->
+
+    <!-- بارگذاری آیکون‌های Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -11,39 +16,57 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- بهبود عملکرد برای لود فونت از گوگل -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- فونت Poppins از گوگل -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- بارگذاری فریم‌ورک Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- فایل CSS سفارشی -->
     <link rel="stylesheet" href="styles.css" />
-    <title>WebEhsan - Buttons</title>
+
+    <title>Buttons_share</title>
   </head>
   <body class="bg-gray-900 grid h-screen m-0 place-items-center">
+    <!-- دکمه اصلی -->
     <button
       class="font-custom relative overflow-hidden justify-center flex w-36 h-12 rounded-3xl border-radius text-white bg-blue-600 cursor-pointer transition-all duration-5000 ease-in-out group hover:[border-radius:0.5rem]"
     >
+      <!-- حالت اولیه دکمه (نمایش متن Share و آیکون) -->
       <span
         class="absolute inset-0 flex items-center justify-center gap-2 text-md transition-all duration-300 ease-in-out translate-y-0 group-hover:-translate-y-10 group-hover:opacity-0"
       >
         <span>Share</span>
         <i class="fa-solid fa-share-nodes"></i>
       </span>
+
+      <!-- حالت هاور (نمایش آیکون‌های شبکه‌های اجتماعی) -->
       <span
         class="absolute inset-0 flex gap-5 items-center justify-center px-7 opacity-0 transition-opacity ease-in-out group-hover:opacity-100"
       >
+        <!-- آیکون توییتر -->
         <a
           class="transition-transform text-lg duration-200 ease-in-out translate-y-10 group-hover:translate-y-0"
         >
           <i class="fa-brands fa-twitter"></i>
         </a>
+
+        <!-- آیکون فیسبوک -->
         <a
           class="transition-transform text-lg duration-200 ease-in-out translate-y-10 group-hover:translate-y-0 group-hover:delay-75"
         >
           <i class="fa-brands fa-facebook"></i>
         </a>
+
+        <!-- آیکون لینکدین -->
         <a
           class="transition-transform text-lg duration-200 ease-in-out translate-y-10 group-hover:translate-y-0 group-hover:delay-150"
         >
@@ -51,6 +74,8 @@
         </a>
       </span>
     </button>
+
+    <!-- پیکربندی فونت سفارشی در Tailwind -->
     <script>
       tailwind.config = {
         theme: {
